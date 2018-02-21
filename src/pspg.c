@@ -1890,6 +1890,11 @@ exit_search_next_bookmark:
 			case '2':
 			case '3':
 			case '4':
+			case '5':
+			case '6':
+			case '7':
+			case '8':
+			case '9':
 				_columns = c - '0';
 				cursor_col = 0;
 				refresh_scr = true;
@@ -2150,6 +2155,7 @@ recheck_right:
 				cursor_row = first_row + ((maxy - scrdesc.fix_rows_rows + desc.title_rows - 3) >> 1);
 				break;
 
+			case 'b':
 			case KEY_PPAGE:
 			case 2:		/* CTRL B */
 				{
@@ -2178,6 +2184,7 @@ recheck_right:
 				}
 				break;
 
+			case 'f':
 			case KEY_NPAGE:
 			case ' ':
 			case 6:		/* CTRL F */
@@ -2213,6 +2220,7 @@ recheck_right:
 				}
 				break;
 
+			case 12:
 			case KEY_RESIZE:
 				refresh_scr = true;
 				resize_scr = true;
